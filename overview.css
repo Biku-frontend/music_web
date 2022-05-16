@@ -1,0 +1,331 @@
+/* GOOGLE FONT IMPORT */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap');
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --purple500: #281154;
+    --purple300: #270082;
+    --purple600: #1b0058;
+    --red600: #dc0000;
+    --body: #f9f6ff;
+    --text-color: #fafafa;
+    --max-width: 1200px;
+  }
+
+
+  body {
+    background: var(--text-color);
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+    text-transform: capitalize;
+    line-height: 1.4;
+    margin: 0 auto;
+    text-transform: capitalize;
+}
+
+.container{
+    max-width: 90%;
+    width: 1200px;
+    padding: 1rem;
+    margin: 0 auto;
+}
+
+
+
+
+
+
+/* OVERVIEW */
+
+#overview{
+    background: url(./img/hero_image.png);
+
+
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    height: 100vh;
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.overview_text{
+display: flex;
+flex-direction: column;
+gap: 2rem;
+}
+
+.overview_text h1{
+    font-size: 5rem;
+  }
+ 
+.overview_text h3{
+   font-size: 1.5rem;
+ }
+ 
+
+ /* MEDIA QUIRES - OVERVIEW SECTION */
+
+ @media (min-width:375px) and (max-width:470px){
+
+    
+#overview{
+  
+    height: 70vh;
+    
+    
+}
+    .overview_text h1{
+        font-size: 2rem;
+      }
+     
+    .overview_text h3{
+       font-size: 0.96rem;
+     }
+
+     .overview_text p{
+         font-size: 0.76rem;
+     }
+     
+ }
+
+
+ /* MUSIC SECTION */
+
+ #music{
+   background: var(--purple500);
+   padding-top: 1.5rem;
+ }
+
+
+ .music-text{
+   color: var(--text-color);
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   gap: 2rem;
+ }
+
+ .ipad-iphone-img{
+   position: relative;
+   top: 400px;
+   margin-top: -400px;
+ }
+
+
+ 
+/* button */
+
+.primary-btn{
+
+  padding: 1rem 2rem;
+  border-radius: 0.66rem;
+  position: relative;
+  background: none;
+  background-color: var(--purple300);
+  border: solid 0.01px transparent;
+  transition: color 200ms;
+  color: var(--text-color);
+  font-size: 1.2rem;
+  text-align: center;
+  font-weight: bold;
+  text-transform: capitalize;
+  transition: 0.10s ease-in-out;
+  max-width: 280px;
+  width: 90%;
+}
+
+
+.primary-btn:is(:hover,:focus){
+  color: var(--purple300);;
+  background-color: var(--text-color);
+}
+
+.primary-btn::after{
+  position: absolute;
+  content: '';
+  inset: 0;
+  z-index: -10;
+  background-color: var(--purple300);
+  background-color: var(--text-color);
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: transform 200ms;
+}
+
+.primary-btn:is(:hover,:focus)::after{
+  transform: scale(1);
+}
+
+
+ /* MEDIA QUIRES - MUSIC SECTION */
+ 
+ @media (max-width:470px){
+  .ipad-iphone-img{
+    /* max-width: 400px; */
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    object-fit: scale-down;
+
+  }
+ }
+
+
+
+  /* MACBOOK SECTION */
+
+
+  .macbook-text{
+    padding-top: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.9rem;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+
+.secondary-btn{
+  padding: 1rem 2rem;
+  border-radius: 0.66rem;
+  position: relative;
+  background: none;
+  background-color: var(--text-color);
+  border: solid 0.01px var(--purple600);
+  transition: color 200ms;
+  color: var(--purple600);
+  font-size: 1.2rem;
+  text-align: center;
+  font-weight: bold;
+  text-transform: capitalize;
+  transition: 0.10s ease-in-out;
+  max-width: 280px;
+  width: 90%;
+}
+
+
+.secondary-btn:is(:hover,:focus){
+  color: var(--text-color);
+  background-color: var(--purple600);
+}
+
+.secondary-btn::after{
+  position: absolute;
+  content: '';
+  inset: 0;
+  z-index: -10;
+  background-color: var(--purple300);
+  background-color: var(--text-color);
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: transform 200ms;
+}
+
+.secondary-btn:is(:hover,:focus)::after{
+  transform: scale(1);
+}
+
+
+/* VIDEO SECTION */
+
+.video-section{
+  background: url(./img/video.png);
+  min-height: 800px;
+  display: grid;
+  place-items: center;
+  color: var(--text-color);
+  text-align: center;
+
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.video-text{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+
+/* GIFT */
+
+
+
+.gift-section {
+  scroll-margin: 120px;
+}
+
+#gift-cards{
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+  gap: 1.5rem;
+}
+
+.gift-content{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* FOOTER UPPER */
+
+.footer-upper{
+  background-color: var(--purple600);
+  color: var(--text-color);
+  padding: 2rem;
+  
+}
+
+.container{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  /* padding: 2rem; */
+  flex-grow: 1;
+  
+}
+
+.footer-upper h4 {
+  padding-bottom: 0.625rem;
+  border-bottom: 2px solid var(--text-color);
+  margin-bottom: 0.625rem;
+}
+
+.footer-lower {
+  background-color: var(--purple300);
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  /* flex-wrap: wrap; */
+  color: var(--text-color);
+}
+
+.footer-links{
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 1rem;
+}
